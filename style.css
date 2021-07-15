@@ -1,0 +1,269 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;  
+}
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
+
+}
+/* ############### utility classes ########### */
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+.btn{
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 0.5em;
+    font-weight: 400;
+    width: 10vw;
+    text-align: center;
+   
+}
+.btn-primary{
+    color: #fff;
+    background: #13569e;
+}
+.btn-primary:hover{
+    background:#052350;
+    transition: background 0.3s ease-in;
+}
+
+/* ########## navbar styling ############## */
+.navbar input[type='checkbox'],
+.navbar .hamburger-lines{
+    display: none;
+}
+.navbar{
+    box-shadow: 0px 5px 10px 0px #aaa;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    /* opacity: 0.85; */
+    z-index: 999;
+
+}
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+
+}
+.menu-items{
+    order: 2;
+    display: flex;
+}
+.menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.8rem;
+}
+.logo{
+    order: 1;
+    font-size: 3rem;
+}
+.navbar a{
+    color: #444;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+.navbar a:hover{
+    color: #117964;
+
+}
+/* ############# showcase area ########### */
+.site-header{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(57deg,#97b1ff,#1a385e);
+    clip-path: polygon(0% 0%,100% 0%, 100% 75%, 0% 100%);
+}
+.showcase-container
+{
+    display: flex;  
+    color: black;
+}
+.left{
+    margin: 120px 100px;
+  
+}
+.right{
+    margin: 300px 80px;
+    font-size: 2.6rem;
+    color: white;
+}
+/* .right h1{
+    color: white;
+} */
+
+/* ############### contact us ############## */
+#contact{
+    padding: 3rem 0;
+    background: rgb(242, 239, 248);    
+}
+.contact-container{
+    display: flex;
+    background: #fff;
+}
+.contact-image{
+    width: 50%;
+}
+.contact-image img{
+    display: block;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+    width: 90%;
+}
+.form-container{
+    padding: 1rem;
+    width: 50%;
+    margin: 0.3em;
+    font-weight: 400;
+}
+.form-container input{
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    padding: 1rem 0;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 1rem;
+    color: #444;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.form-container textarea{
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid rgb(192, 216, 233);
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.form-container h2{
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgb(77, 74, 74);
+    margin: 1rem;
+    text-align: left;
+    margin-bottom: 2em;
+}
+.form-container {
+    font-size: 1.5rem;
+}
+#footer h2{
+    text-align: center;
+    font-size: 2rem;
+    padding: 3rem;
+    font-weight: 500;
+    color: #fff;
+    background: rgb(65,65,65);
+}
+/* ################ media queries ################  */
+@media (max-width: 768px){
+    .navbar{
+        opacity: 0.95;
+    }
+    .navbar-container input[type='checkbox'],
+    .navbar-container .hamburger-lines{
+        display: block;
+    }
+    .navbar-container{
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+    .navbar-container input[type='checkbox']{
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 40px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+    }
+    .navbar-container .hamburger-lines{
+        display: block;
+        height: 32px;
+        width: 40px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction:column;
+        justify-content: space-between;
+    }
+    .navbar-container .hamburger-lines .line{
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #333333;
+    }
+    .navbar-container .hamburger-lines .line1{
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+    .navbar-container .hamburger-lines .line2{
+        transition: transform 0.4s ease-in-out;
+    }
+    .navbar-container .hamburger-lines .line3{
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+    .navbar .menu-items{
+        padding: 100px;
+        background: #ffff;
+        height: 100vh;
+        max-width: 300px;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 50px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow: 5px 0px 10px 0px #aaa;
+    }
+    .navbar .menu-items li{
+        margin-bottom: 3rem;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    .logo{
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 3rem;
+    }
+    .navbar-container input[type='checkbox']:checked ~ .menu-items{
+        transform: translateX(0);
+    }
+    .navbar-container input[type='checkbox']:checked ~ .hamburger-lines .line1{
+        transform: rotate(45deg);
+    }
+    .navbar-container input[type='checkbox']:checked ~ .hamburger-lines .line2{
+        transform: scaleY(0);
+    }
+    .navbar-container input[type='checkbox']:checked ~ .hamburger-lines .line3{
+        transform: rotate(-45deg);
+    }
+}
